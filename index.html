@@ -175,20 +175,107 @@
     /* 鼠标悬停时改变颜色 */
     a:hover {
       color: purple;
-    }   
+    }
+
+
+
+        
 
     </style>
+
+
 
     
 </head>
 <body>
-  
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#workshop" data-section="workshop">Workshops</a>
+    </div>
 
   
 
 
+<!-- JavaScript for Accordion -->
+<script>
+    function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const allContents = document.querySelectorAll('.accordion-content');
 
-    <!-- Workshops Section -->
+        // Close other accordion items
+        allContents.forEach(section => {
+            if (section !== content) {
+                section.style.display = 'none';
+            }
+        });
+
+        // Toggle current section
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+    
+</script>
+
+    
+<!-- CSS Styles for Accordion -->
+<style>
+    
+/* Problem Discussion Accordion Styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align content */
+}
+
+.accordion-item {
+    width: 70%; /* Set accordion sections to 80% width */
+    margin-bottom: 15px; /* Increase spacing between items */
+    background-color: #f9f9f9; /* #f9f9f9 Light gray for entire item */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Smooth edges */
+    overflow: hidden; /* Ensure content stays within bounds */
+}
+
+.accordion-header {
+    background-color: #6e8b6e; /* Slightly darker gray for header background */
+    padding: 20px; /* Increase padding for more space */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
+    text-align: left; /* Align header text to the left */
+}
+
+.accordion-header:hover {
+    background-color: #9acd9a; /* F5F5F5 Slightly darker gray on hover */
+}
+
+.accordion-content {
+    padding: 20px; /* Increase padding for more vertical spacing */
+    display: none; /* Initially hidden */
+}
+
+.accordion-content p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.accordion-content hr {
+    border: none;
+    border-top: 1px solid #d3d3d3; /* Subtle divider */
+    margin: 15px 0;
+}
+
+
+</style>
+
+
+    
+
+        <!-- Workshops Section -->
     <div class="content" id="workshop">
         <div class="header">
             <h1>Workshops</h1>
@@ -230,7 +317,7 @@
         
     </div>
 
-
+    
 
 <!-- JavaScript for Accordion -->
 <script>
@@ -307,6 +394,8 @@
 
 
 </style>
+
+
 
 
 
