@@ -1,443 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICTFB2025</title>
-    <style>
-        /* General styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F9FAFB;
-            color: #333;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background-color: #000; /* Black background */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            display: block;
-        }
-
-        .navbar a:hover, .navbar a.active {
-            background-color: #0056B3; /* Academic blue for highlight */
-            border-radius: 5px;
-        }
-
-
-     /* Gray background#E8E8E8;Academic blue 0056B3 */
-    /* Deep red to bright red gradient  #8b0000, #ff4500*/ 
-
-        /* Header Section */
-  .header {
-          border-radius: 8px;
-    background: linear-gradient(to right,  #104e8b, #006400, #104e8b); /* 蓝色到绿色渐变 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 80px 20px 40px;
-            text-align: center;
-            margin-top:20px; /* Offset for navbar height */
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color:#fff ;    /*  #2C3E50 */
-        }
-
-        .header p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: #fff;
-        }
-
-
-
-
-
-
-        
-        /* Info Section */
-        .info {
-            background-color:  #f5f5f5;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            text-align: center; /* Center align text */
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .info p {
-            margin: 10px 0;
-            line-height: 1.5;
-        }
-
-        .info span {
-            font-weight: bold;
-            color: #2C3E50;
-        }
-
-        /* Divider */
-        
-        .divider {
-            width: 100%;
-            border-top: 2.5px solid black;
-            margin: 30px 0;
-        }
-
-.subdivider {
-    width: 100%; /* 分割线的宽度，可以设置为固定宽度 */
-    height: 0.5px; /* 设置分割线的高度（粗细） */
-    background-color: #333333; /* 000设置分割线的颜色 */
-    margin: 20px 0; /* 给上下加一些间距 */
-}
-
-
-        
-        /* Schedule Section */
-
-/* styles.css */
-
-.schedule {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0;
-    text-align: center;
-}
-
-.seminar-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seminar-item {
-    background-color: #F5F5F5;
-    border: 1px solid #000; /* Black fine line as border */
-    border-left: 2.5px solid #000; /* Slightly thicker black line on the left */
-    padding: 15px;
-    margin: 10px 0;
-    width: 70%; /* Adjusted to 80% of the parent container */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-.seminar-item h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.seminar-item p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.seminar-item span {
-    font-weight: bold;
-    color: #555;
-}
-   
-
-        /* Sections (hidden by default) */
-        .content {
-            padding-top: 20px;
-            display: none;
-        }
-
-        .content.active {
-            display: block;
-        }
-    a {
-      text-decoration: none;
-      color: blue; /* 你可以设置任何颜色 */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICTFB 2025 - International Conference on Tiling and Fourier Bases</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
     }
-
-    /* 使点击后的链接保持和普通链接一样的颜色 */
-    a:visited {
-      color: blue;
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
     }
+    
+nav {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+nav a:hover, nav a:focus, nav a:active {
+  background-color: #0055aa;
+  color: #fff;
+}
 
-    /* 鼠标悬停时改变颜色 */
-    a:hover {
-      color: purple;
-    }
-
-
-
-        
-
-    </style>
-
+    
 
 
     
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    section {
+      padding: 20px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #004080;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="#workshop" data-section="workshop">Workshops</a>
-    </div>
-
-    
-
-
-
-
-
-<!-- JavaScript for Accordion -->
-<script>
-    function toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const allContents = document.querySelectorAll('.accordion-content');
-
-        // Close other accordion items
-        allContents.forEach(section => {
-            if (section !== content) {
-                section.style.display = 'none';
-            }
-        });
-
-        // Toggle current section
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    }
-    
-</script>
-
-    
-<!-- CSS Styles for Accordion -->
-<style>
-    
-/* Problem Discussion Accordion Styles */
-.accordion {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align content */
-}
-
-.accordion-item {
-    width: 70%; /* Set accordion sections to 80% width */
-    margin-bottom: 15px; /* Increase spacing between items */
-    background-color: #f9f9f9; /* #f9f9f9 Light gray for entire item */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Smooth edges */
-    overflow: hidden; /* Ensure content stays within bounds */
-}
-
-.accordion-header {
-    background-color: #6e8b6e; /* Slightly darker gray for header background */
-    padding: 20px; /* Increase padding for more space */
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
-    text-align: left; /* Align header text to the left */
-}
-
-.accordion-header:hover {
-    background-color: #9acd9a; /* F5F5F5 Slightly darker gray on hover */
-}
-
-.accordion-content {
-    padding: 20px; /* Increase padding for more vertical spacing */
-    display: none; /* Initially hidden */
-}
-
-.accordion-content p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.accordion-content hr {
-    border: none;
-    border-top: 1px solid #d3d3d3; /* Subtle divider */
-    margin: 15px 0;
-}
-
-
-</style>
-
-
-    
-    
-
-
-        <!-- Workshops Section -->
-    <div class="content" id="workshop">
-        <div class="header">
-            <h1>Workshops</h1>
-        </div>
- 
-  <div class="divider"></div>
-        
-
-
-<div class="seminar-list">
-    <div class="seminar-item">
-        
-<div class="schedule"> 
-    <h2><a style="color: blue">International conference on tiling and Fourier bases (2025 Sep.15-- Sep.19)</a> </h2>
-    <p>An International Workshop on tiling and Fourier bases will be held at Sep. 15-19, 2025 in Xi'an. The focus of this workshop will be on the structure of tiling and spectral sets (the Fuglede problem). Related areas are also welcome.</p>
+  <header>
+    <h1>International Conference on Tiling and Fourier Bases (2025 Sep.15-- Sep.19)</h1>
+       <p>An International Workshop on tiling and Fourier bases will be held at Sep. 15-19, 2025 in Xi'an.  <p>
+ <p>The focus of this workshop will be on the structure of tiling and spectral sets (the Fuglede problem). Related areas are also welcome.</p>
 <p>The expected arrival and departure dates will be 15th Sep. 2025 and 19th Sep. 2025, respectively.</p>
-    <p>Participation in this conference is by invitation only.</p>
-</div>
-       
-<div class="subdivider"></div>
-<h3><a style="color: blue">Invited Speakers (Ongoing)</a></h3>
-  <br>
-        
-<h3><a style="color: blue">Organizers</a></h3>
-        <p><a href="https://maths.ccnu.edu.cn/info/1040/26808.htm" target="_blank" style="text-decoration: none;">Shilei Fan</a> (Central China Normal University)</p>
+  </header>
+
+  <nav>
+    <a href="#speakers">Invited Speakers (Ongoing)</a>
+    <a href="#organizers">Organizers</a>
+    <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    <a href="#visa">Visa</a>
+  </nav>
+
+  <div class="container">
+    <section id="speakers">
+      <h2><a style="color: blue">Invited Speakers (Ongoing)</h2>
+    <p><a style="color: black">Participation in this conference is by invitation only.</p>
+ </section>
+
+    <section id="organizers">
+      <h2><a style="color: blue">Organizers</h2>
+         <p><a href="https://maths.ccnu.edu.cn/info/1040/26808.htm" target="_blank" style="text-decoration: none;">Shilei Fan</a> (Central China Normal University)</p>
         <p><a href="https://eigen-space.org/" target="_blank" style="text-decoration: none;">Mihalis Kolountzakis</a> (University of Crete)</p>
         <p><a href="https://sites.google.com/site/romanosdiogenesmalikiosis/home" target="_blank" style="text-decoration: none;">Romanos Malikiosis</a> (Aristotle University of Thessaloniki)</p>
         <p><a href="https://taozhang220.github.io/" target="_blank" style="text-decoration: none;">Tao Zhang</a> (Xidian University)</p>
-   <br>
-        
-  <h3><a style="color: blue">Location</a></h3>    
-        <p>North Campus, Xidian University, Taibai South Road, Xi'an, Shaanxi, 710071, China</p>
-          <br>
-        
-<h3><a style="color: blue">Visa</a></h3>    
-        <p>Please check this <a href="https://www.ieee-itw2024.org/Visa" target="_blank" style="text-decoration: none;">link</a> for detailed information (from another conference).</p>
-    </div>
- </div>
-        
-    </div>
 
+    </section>
+
+    <section id="location">
+      <h2><a style="color: blue">Location</h2>
+       <p><a style="color: black">North Campus, Xidian University, Taibai South Road, Xi'an, Shaanxi, 710071, China</p>
+    </section>
     
-
-
-<!-- JavaScript for Accordion -->
-<script>
-    function toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const allContents = document.querySelectorAll('.accordion-content');
-
-        // Close other accordion items
-        allContents.forEach(section => {
-            if (section !== content) {
-                section.style.display = 'none';
-            }
-        });
-
-        // Toggle current section
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    }
+  <section id="contact">
+      <h2><a style="color: blue">Contact</h2>
+       <p><a style="color: black">For inquiries, please email: <a href="mailto:ictfb2025@conference.org">ictfb2025@conference.org</a></p>
+    </section>
     
-</script>
-
+    <section id="visa">
+      <h2><a style="color: blue">Visa</h2>
+      <p><a style="color: black">Please check this <a href="https://www.ieee-itw2024.org/Visa" target="_blank" style="text-decoration: none;">link</a> for detailed information (from another conference).</p>
+    </section>
     
-<!-- CSS Styles for Accordion -->
-<style>
-    
-/* Past Seminars Accordion Styles */
-.accordion {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align content */
-}
-
-.accordion-item {
-    width: 70%; /* Set accordion sections to 80% width */
-    margin-bottom: 15px; /* Increase spacing between items */
-    background-color: #f9f9f9; /* #f9f9f9 Light gray for entire item */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    border-radius: 8px; /* Smooth edges */
-    overflow: hidden; /* Ensure content stays within bounds */
-}
-
-.accordion-header {
-    background-color: #6e8b6e; /* Slightly darker gray for header background */
-    padding: 20px; /* Increase padding for more space */
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px solid #d3d3d3; /* Divider line below header */
-    text-align: left; /* Align header text to the left */
-}
-
-.accordion-header:hover {
-    background-color: #9acd9a; /* F5F5F5 Slightly darker gray on hover */
-}
-
-.accordion-content {
-    padding: 20px; /* Increase padding for more vertical spacing */
-    display: none; /* Initially hidden */
-}
-
-.accordion-content p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.accordion-content hr {
-    border: none;
-    border-top: 1px solid #d3d3d3; /* Subtle divider */
-    margin: 15px 0;
-}
+  </div>
 
 
-</style>
+  
+  <footer>
+    <p>&copy; 2025 ICTFB. All rights reserved.</p>
+  </footer>
 
-
-
-
-
-
-
-
-
-    
-
-    <!-- JavaScript for Navigation -->
-    <script>
-       // Select all navigation links and content sections
-        const navLinks = document.querySelectorAll('.navbar a');
-        const sections = document.querySelectorAll('.content');
-
-        // Add click event listeners to navigation links
-        navLinks.forEach(link => {
-            link.addEventListener('click', event => {
-                event.preventDefault(); // Prevent default anchor behavior
-
-                // Remove active class from all links and sections
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                sections.forEach(section => section.classList.remove('active'));
-
-                // Add active class to the clicked link
-                link.classList.add('active');
-
-                // Show the corresponding section
-                const targetSection = document.getElementById(link.dataset.section);
-                targetSection.classList.add('active');
-            });
-        });
-
-        // Show the Home section by default
-        document.getElementById('home').classList.add('active'); // Activate the Home section
-        navLinks[0].classList.add('active'); // Highlight the Home link
-    </script>
 </body>
 </html>
+
